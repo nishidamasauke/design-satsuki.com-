@@ -1,0 +1,225 @@
+/*** -----------------------------------------------------------------------------
+
+TOPページ #home
+
+-----------------------------------------------------------------------------  ***/
+#home #wrapper #cont #main section .inner{
+	width:1100px;
+	margin:0 auto 50px;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+}
+@media screen and (max-width:680px) {
+	#home #wrapper #cont #main section .inner{
+		width:auto;
+		margin:0 15px;
+	}
+}
+#home #wrapper #cont #main section .inner h2{
+	width:428px;
+}
+@media screen and (max-width:680px) {
+	#home #wrapper #cont #main section .inner h2{
+		width:50%;
+		margin:0 auto 15px;
+	}
+	#home #wrapper #cont #main section .inner h2 img{
+		max-width:100%;
+		height: auto;
+	}
+}
+#home #wrapper #cont #main section .inner p.cont-in{
+	font-size: 16px;
+	width:640px;
+}
+@media screen and (max-width:680px) {
+	#home #wrapper #cont #main section .inner p.cont-in{
+		width:auto;
+	}
+}
+#home #wrapper #cont #main section.bgb{
+	background:#f3e6db;
+	padding:60px 0 30px;
+}
+#home #wrapper #cont #main section.bgb{
+	background:#f3e6db;
+	padding:60px 0 30px;
+}
+#home #wrapper #cont #main section .inner.service{
+	display: block;
+}
+#home #wrapper #cont #main section .inner.service ul{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+#home #wrapper #cont #main section .inner.service ul li{
+	width: 350px;
+	margin:0 0 50px;
+}
+@media screen and (max-width:680px) {
+	#home #wrapper #cont #main section .inner.service ul li{
+		width: auto;
+	}
+}
+#home #wrapper #cont #main section .inner.service ul li img{
+	float: left;
+	clear: both;
+	margin:0 20px 0 0;
+}
+#home #wrapper #cont #main section .inner.service ul li dl dt{
+	font-size:16px;
+	font-weight: bold;
+	margin:0 0 10px;
+}
+#home #wrapper #cont #main section .inner.service ul li dl dd{
+	font-size:14px;
+}
+#home #wrapper #cont #main section .inner.list{
+	display:block;
+}
+#home #wrapper #cont #main section .inner.list ul{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+#home #wrapper #cont #main section .inner.list ul li{
+	width:49%;
+	text-align:center;
+	margin:0 0 20px;
+	color:#888;
+}
+#home #wrapper #cont #main section .i\nner.list ul li img{
+	max-width:100%;
+	height: auto;
+	margin:0 0 10px;
+}
+#home #wrapper #cont #main section .inner.list .btn{
+	text-align:center;
+}
+/*** -----------------------------------------------------------------------------
+
+下層共通　#page
+
+-----------------------------------------------------------------------------  ***/
+#page #wrapper #cont #main .visual{
+	background:#BA003D;
+	margin:0 0 10px;
+}
+#page #wrapper #cont #main .visual h2{
+	padding: 1.2em 0;
+    font-size: 1.75rem;
+    line-height: 1.1;
+    color:#FFF;
+    text-align:center;
+}
+.breadcrumbs{
+	width:1140px;
+	margin:0 auto 25px;
+	border-bottom:1px solid #EFEFEF;
+}
+@media screen and (max-width:680px) {
+	.breadcrumbs{
+		width:auto;
+		margin:0 15px 25px;
+	}
+}
+#page #wrapper #cont #main section .inner{
+	width:1140px;
+	margin:0 auto;
+}
+@media screen and (max-width:680px) {
+	#page #wrapper #cont #main section .inner{
+		width:auto;
+		margin:0 15px;
+	}
+}
+#page #wrapper #cont #main section .inner p{
+	margin:0 0 20px;
+	font-size:16px;
+}
+
+#page #wrapper #cont #main section .inner.works ul.img li img{
+	max-width: 100%;
+	height: auto;
+}
+#page #wrapper #cont #main section .inner.works ul.img li{
+	margin:0 0 20px;
+}
+#page #wrapper #cont #main section .inner.works h3{
+	font-size:24px;
+	font-weight:bold;
+	margin:0 0 15px;
+}
+#page #wrapper #cont #main section .inner.works .client{
+	font-size:20px;
+	font-weight:bold;
+	margin:0 0 15px;
+}
+#page #wrapper #cont #main section .inner.works .tax li{
+	display: inline-block;
+	margin:0 15px 15px 0;
+}
+#page #wrapper #cont #main section .inner.works .tax li a{
+	display: block;
+	background:#BA003D;
+	color:#FFF;
+	font-size:14px;
+	padding:2px 15px;
+	border-radius: 5px;
+}
+#page #wrapper #cont #main section.work_list .inner{
+	display: flex;
+	flex-wrap:wrap;
+}
+#page #wrapper #cont #main section.work_list .inner .box{
+	width:32%;
+	height: auto;
+	margin:0 auto 20px 0;
+	background:#EFEFEF;
+}
+#page #wrapper #cont #main section.work_list .inner .box:nth-of-type(3n){
+	margin:0 0 20px 0;
+}
+#page #wrapper #cont #main section.work_list .inner .box .img img{
+	max-width: 100%;
+	height: auto;
+}
+#page #wrapper #cont #main section.work_list .inner .box .title,
+#page #wrapper #cont #main section.work_list .inner .box .client{
+	color: #000;
+    padding: 0 0 0 15px;
+    margin: 0 0 5px;
+}
+#page #wrapper #cont #main section.work_list .inner .box a:hover{
+	opacity: 0.7;
+	text-decoration:none;
+}
+
+.wpcf7-form-control{
+	    display: block;
+    width:60%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+@media screen and (max-width:680px) {
+	.wpcf7-form-control{
+	    width:90%;
+	    padding:10px;
+	    height: auto;
+	}
+}
+.wpcf7-submit{
+	    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}

@@ -1,0 +1,286 @@
+/*
+Theme Name: Lightning_child
+Theme URI: https://lightning.nagoya
+Description: Lightning is a very simple & easy to customize theme which is based on the Bootstrap. It is also very friendly with custom post types and custom taxonomies. When you add a new one, the breadcrumbs will be adjusted and posts will look beautifully without editing or adding a template files.
+Author: Vektor,Inc.
+Author URI: https://www.vektor-inc.co.jp
+Version:8.2.2
+Tags: two-columns, one-column, right-sidebar, custom-colors, custom-menu, editor-style, E-Commerce
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lightning
+
+Lightning WordPress theme, Copyright (C) 2015-2019 Vektor,Inc.
+Lightning WordPress theme is licensed under the GPL.
+*/
+
+
+/*　全体　*/
+body {
+  font-size:14px;
+}
+
+.gMenu>li:before {
+  border-bottom:1px solid #ba003d;
+}
+.gMenu>li:after {
+  position: absolute;
+    right: 0;
+    top:18px;
+    content: "/";
+    width: 0;
+}
+.gMenu>li:last-child:after {
+  position: absolute;
+    content: "";
+    width: 0;
+}
+
+.gMenu a:active, .gMenu a:focus, .gMenu a:hover {
+  color:#ba003d;
+  font-weight:bold;
+}
+.current_page_item {
+color: #ba003d;
+}
+
+@media (max-width: 480px){
+.home .container {
+    max-width: 100%;
+    padding:0 40px;
+}
+}
+@media (min-width: 480px){
+.home .container {
+    max-width: 450px;
+}
+}
+@media (min-width: 576px){
+.home .container {
+    max-width: 540px;
+}
+}
+
+@media (min-width: 768px){
+.home .container {
+    max-width: 720px;
+}
+}
+@media (min-width: 992px){
+.home .container {
+    max-width: 960px;
+}
+}
+@media (min-width: 1200px){
+.home .container {
+    max-width: 1140px;
+}
+}
+@media (max-width: 991.98px){
+.home .mainSection {
+    margin-bottom:0;
+}
+}
+/* TOP */
+
+.home .siteContent {
+  padding-bottom:0;
+}
+.home .container {
+ width:1100px;
+ margin:0 auto;
+}
+
+.home h2 {
+  border:none;
+  margin-bottom:60px;
+}
+
+.home .h2text {
+  padding-top:22.4px;
+  font-size:16px;
+}
+.home .section {
+  overflow: hidden;
+}
+
+
+.home .service-block {
+  margin: 0 -9999px;
+  padding: 60px 9999px;
+  background: #f3e6db;
+}
+
+.contact-block {
+  margin: 0 -9999px;
+  padding: 60px 9999px;
+  background: #ba003d;
+}
+.home h3 {
+  border:none;
+  font-weight:bold;
+  font-size:16px;
+  margin-bottom:0;
+  clear:none;
+}
+
+.home h3::after {
+  border:none;
+}
+
+.home .service_left {
+  float:left;
+  margin-bottom:50px;
+}
+
+.home .works-block  {
+  padding-top:50px;
+  padding-bottom:100px;
+}
+
+.home .gallery-item a {
+  background-color:#ba003d;
+  display:block;
+}
+.home .gallery-item a img {
+   transition:all 0.5s ease;
+}
+.home .gallery-item a:hover img{
+  opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.home .morebtn {
+  margin:0 auto;
+}
+
+.contact-block p.h2text {
+  color:#FFF;
+}
+
+.contact_button {
+  padding:20px 100px;
+  text-align:center;
+}
+
+
+
+.contact-block a {
+  margin:0 auto;
+}
+
+.contact-block a:hover {
+  text-decoration: none;
+}
+
+.contact-block a:hover .contact_button {
+  background:#edbccc;
+}
+
+.contact_button img {
+  margin-right:10px;
+  margin-bottom:0;
+}
+
+.contact_button .contex {
+  font-size:24px;
+  color:#ba003d;
+  font-weight:bold;
+}
+.siteFooter {
+  border:none;
+  background-color:#000;
+}
+
+.sectionBox {
+	padding: 20px 0;
+}
+.siteContent_after {
+  background-color:#6d0129;
+  text-align:center;
+  color:#FFF;
+  font-size:16px;
+  padding:20px 0;
+}
+.siteFooter #text-3 {
+  text-align:center;
+  color:#FFF;
+  font-size:16px;
+}
+.copySection {
+  color:#FFF;
+}
+
+.textwidget p{
+	margin:0;
+}
+
+.home #text-3 a {
+  color:#FFF;
+}
+
+.home #gallery-1 img {
+  border:none !important;
+}
+
+@media (max-width:480px) {
+  .home h2 {
+    margin-bottom:0;
+    padding-bottom:0;
+  }
+  .home .contact_button {
+    padding:20px 30px;
+  }
+}
+
+
+/* スライド */
+.home .flex-control-paging li a.flex-active {
+  background-color:#ba003d !important;
+}
+
+.home .flex-control-paging li a:hover {
+    background:#ba003d !important;
+}
+
+
+/*お問い合わせ*/
+
+.contact-block .btn-square {
+  display: inline-block;
+  padding: 1.2em 7em;
+  text-decoration: none;
+  background: #FFF;/*ボタン色*/
+  color: #BA003D;
+  border-bottom: solid 4px #6D0129;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.contact-block .btn-square:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+.contact-block h2.contact-title{
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.contact-block  p.con-text{
+	text-align: center;
+	color: #fff;
+}
+
+@media (max-width: 767px) {
+	.contact_button {
+  padding: 0 15px;
+  }
+  .contact-block .btn-square{
+	  font-size: 1.0em;
+  }
+
+}
+
