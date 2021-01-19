@@ -148,7 +148,7 @@ header .inner{
      flex-wrap: wrap;
      justify-content: space-between;
 }
-@media screen and (max-width:680px) { 
+@media screen and (max-width:680px) {
   header .inner{
        width:auto;
        margin:0 15px;
@@ -368,4 +368,180 @@ footer .copy{
   -webkit-transform: translateX(0%);
   transform: translateX(0%);/*中身を表示（右へスライド）*/
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+/* #pager */
+#pager{
+	position:relative;
+	text-align: center;
+	margin:0 0 30px;
+	border: 1px #CCC solid;
+/*	font-size: 1.167em;*/
+	font-size: 16px;
+}
+#pager li{
+	width:33.3%;
+	box-sizing:border-box;
+}
+#pager li.prev{
+	float:left;
+}
+#pager li.next{
+	float:right;
+}
+#pager li.stay{
+	margin:0 auto;
+	border-left: 1px #CCC solid;
+	border-right: 1px #CCC solid;
+}
+#pager a{
+	color: #333;
+	text-decoration: none;
+	display:block;
+	padding:10px 0;
+}
+#pager a:hover{
+	background:  #F2F2F2;
+}
+
+/*  繝ｬ繧ｹ繝昴Φ繧ｷ繝悶�繝ｼ繧ｸ繝阪�繧ｷ繝ｧ繝ｳ */
+.paginations{
+  list-style-type: none;
+  padding-left: 0;
+  margin: 30px 0;
+}
+
+.paginations,
+.paginations li a {
+	/* flex */
+	display:-webkit-box;/*--- Android繝悶Λ繧ｦ繧ｶ逕ｨ ---*/
+    display:-ms-flexbox;/*--- IE10 ---*/
+    display: -webkit-flex;/*--- safari��PC�臥畑 ---*/
+    display:flex;
+    -webkit-box-pack:center;/*--- Android繝悶Λ繧ｦ繧ｶ逕ｨ ---*/
+    -ms-flex-pack:center;/*--- IE10 ---*/
+    -webkit-justify-content:space-between;/*--- safari��PC�臥畑 ---*/
+    justify-content:space-between;
+	-webkit-display: flex;
+
+  flex-wrap: wrap;
+  -webkit-justify-content: center;/*--- safari��PC�臥畑 ---*/
+  justify-content: center;
+  text-align:center;
+
+  -webkit-box-align:center;/*--- Android繝悶Λ繧ｦ繧ｶ逕ｨ ---*/
+  -ms-flex-align:center;/*--- IE10 ---*/
+  -webkit-align-items:center;/*--- safari��PC�臥畑 ---*/
+  align-items:center;
+}
+
+.paginations a {
+  font-weight: 300;
+  padding-top: 1px;
+  text-decoration:none;
+  border: 1px solid #ddd;
+  border-left-width: 0;
+  min-width:36px;
+  min-height:36px;
+  color: #333;
+  text-align:center;
+}
+
+.paginations li:not([class*="current"]) a:hover {
+  background-color: #eee;
+}
+
+.paginations li:first-of-type a {
+  border-left-width: 1px;
+}
+
+.paginations li.first span,
+.paginations li.last span,
+.paginations li.previous span,
+.paginations li.next span {
+  /* screen readers only */
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.paginations li.first a::before,
+.paginations li.last a::after,
+.paginations li.previous a::before,
+.paginations li.next a::after {
+  display: inline-block;
+  font-family: Fontawesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+.paginations li.first a::before { content: "\f100"; }
+.paginations li.last a::after { content: "\f101"; }
+
+.paginations li.previous a::before { content: "\f104"; }
+.paginations li.next a::after { content: "\f105"; }
+
+.paginations li.current a {
+ background-color: #ddd;
+ cursor: default;
+ pointer-events: none;
+}
+
+.paginations > li:first-child > a {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.paginations > li:last-child > a {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+@media only screen and ( max-width: 680px ) {
+  .paginations li.first,
+  .paginations li.last {
+    /* screen readers only */
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .paginations li.previous a { border-left-width: 1px; }
+}
+
+
+  .paginations li.current,
+  .paginations li.first,
+  .paginations li.last,
+  .paginations li.previous,
+  .paginations li.next{
+    position: initial;
+    top: initial;
+    left: initial;
+  }
+
+  .paginations li.previous a { border-left-width: 0; }
+}
+@media only screen and ( max-width: 400px ) {
+  .paginations li.first,
+  .paginations li.last {
+    /* screen readers only */
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .paginations li.previous a { border-left-width: 1px; }
+}
+@media only screen and ( max-width: 240px ) { /* For watches? */
+  .paginations li { width: 50%;}
+
+  .paginations li.current {
+    order: 2;
+    width: 100%;
+    border-left-width: 1px;
+  }
 }

@@ -18,24 +18,41 @@
                     </div>
                <section>
                     <div class="inner works">
-                      <ul class="img">
-                        <li><?php 
+                      <ul class="img mainImage mainItem">
+                        <li><?php
                               $image = get_field('image01');
                               if( !empty( $image ) ): ?>
                                   <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                               <?php endif; ?></li>
-                        <li><?php 
+                      </ul>
+                      <ul class="img thumbnails subItem">
+                        <li><?php
+                              $image = get_field('image01');
+                              if( !empty( $image ) ): ?>
+                                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                              <?php endif; ?></li>
+                        <li><?php
                               $image = get_field('image02');
                               if( !empty( $image ) ): ?>
                                   <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                               <?php endif; ?></li>
-                        <li><?php 
+                        <li><?php
                               $image = get_field('image03');
                               if( !empty( $image ) ): ?>
                                   <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                               <?php endif; ?></li>
-                        <li><?php 
+                        <li><?php
                               $image = get_field('image04');
+                              if( !empty( $image ) ): ?>
+                                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                              <?php endif; ?></li>
+                        <li><?php
+                              $image = get_field('image05');
+                              if( !empty( $image ) ): ?>
+                                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                              <?php endif; ?></li>
+                        <li><?php
+                              $image = get_field('image06');
                               if( !empty( $image ) ): ?>
                                   <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                               <?php endif; ?></li>
@@ -43,7 +60,7 @@
                       <h3><?php the_title(); ?></h3>
                       <p class="client"><?php the_field('client'); ?></p>
                       <p class="url"><a href="<?php the_field('url'); ?>"><?php the_field('url'); ?></a></p>
-                      <?php 
+                      <?php
                         $terms = get_field('category');
                         if( $terms ): ?>
                             <ul class="tax">

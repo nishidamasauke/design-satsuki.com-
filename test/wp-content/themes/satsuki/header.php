@@ -7,9 +7,15 @@
 <title>SATSUKI design factory |</title>
 <link type="text/css" rel="stylesheet" href="/common/css/default.css" />
 <link href="/common/css/page.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/common/js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="/common/js/jquery.page-scroller-308.js"></script>
-<script type="text/javascript" src="/common/js/jquery.ptop.js"></script>
-<script type="text/javascript" src="/common/js/smartRollover.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <?php wp_head(); ?>
+<script type="text/javascript">
+jQuery(function($){
+ $('.subItem img').click(function(){
+  var $thisImg = $(this).attr('src');
+  var $thisAlt = $(this).attr('alt');
+  $('.mainItem img').attr({src:$thisImg,alt:$thisAlt});
+ });
+});
+</script>
 </head>

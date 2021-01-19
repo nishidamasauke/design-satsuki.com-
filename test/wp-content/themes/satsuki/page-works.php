@@ -17,31 +17,48 @@
                         }?>
                     </div>
                <section class="work_list">
-                        <?php
-                          $args = array(
-                            'post_type' => 'work_post',
-                            'posts_per_page' => 6, /* 表示する数 */
-                          'paged' => $paged
-                          ); ?>
-                          <?php $my_query = new WP_Query( $args ); ?>
-                          <div class="inner">
-                                <?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
-                                <!-- ▽ ループ開始 ▽ -->
-                                <div class="box">
-                                  <a href="<?php the_permalink(); ?>">
-                                    <p class="img"><?php 
-                              $image = get_field('image01');
-                              if( !empty( $image ) ): ?>
-                                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                              <?php endif; ?></p>
-                                    <p class="title"><?php the_title(); ?></p>
-                                    <p class="client"><?php the_field('client'); ?></p>
-                                  </a>
+                <ul class="tax">
+                  <li><a href="/works/">全ての実績</a></li>
+                 <?php
+$terms = get_terms('work_tax');
+foreach ( $terms as $term ) {
+echo '<li><a href="'.get_term_link($term).'">'.$term->name.'</a></li>';
+}
+?>
+                </ul>
+                                                    <div class="inner">
+                          <?php
+                          					  $args = array(
+                                      'post_type' => 'work_post',
+                          					  'paged' => $paged,
+                          					  'posts_per_page' => 42,/* 1ページに表示する件数を指定 */
+                          					  ); ?>
+                          				 <?php query_posts( $args ); ?>
+
+                          				<?php if (have_posts()) : ?>
+                          					<?php while (have_posts()) : the_post(); ?>
+                                    <div class="box">
+                                      <a href="<?php the_permalink(); ?>">
+                                        <p class="img"><?php
+                                  $image = get_field('image01');
+                                  if( !empty( $image ) ): ?>
+                                      <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                  <?php endif; ?></p>
+                                        <p class="title"><?php the_title(); ?></p>
+                                        <p class="client"><?php the_field('client'); ?></p>
+                                      </a>
+                                      </div>
+                          					<?php endwhile; ?>
+                          				<?php else : ?>
+                          				<?php endif; ?>
+
                                   </div>
-                                <!-- △ ループ終了 △ -->
-                                <?php endwhile; ?>
-                          </div>
-                          <?php wp_reset_postdata(); ?>
+                                  <div class="inner">
+                          				<?php if (function_exists('responsive_pagination')) {
+                          					responsive_pagination($additional_loop->max_num_pages);
+                          				} ?>
+                                  </div>
+                          				<?php wp_reset_query(); ?>
                </section>
           </div>
           <!--/#main-->
